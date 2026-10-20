@@ -1,0 +1,5 @@
+"Role","Accession","Platform","Preparation","Composition","n","Genes","Panel coverage"
+"Discovery","GSE63514","Affymetrix HG-U133 Plus 2.0 (GPL570)","Laser-capture-microdissected epithelium","Normal 24, CIN1 14, CIN2 22, CIN3 40, Cancer 28",128,21755,"33 of 33"
+"Replication 1","GSE138080","Agilent-014850 Whole Human Genome 4x44K (GPL4133)","Bulk tissue","Normal 10, HGCIN 15, SCC 10",35,13609,"28 of 33"
+"Replication 2","GSE27678","Affymetrix HG-U133A 2.0 (GPL571)","Exfoliated cytology","Normal 12, LSIL 11, HSIL 21",44,13101,"32 of 33"
+"Concordance check","GSE27678","Affymetrix HG-U133 Plus 2.0 (GPL570)","Exfoliated cytology","Normal 3, Cancer 28",31,21755,"33 of 33"

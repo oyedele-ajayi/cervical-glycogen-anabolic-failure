@@ -1,0 +1,5 @@
+"module","size","NES","p_nominal","padj","leading_edge","leading_edge_n"
+"Synthesis",9,-1.6376,0.01239,0.02477,"GYS2, PPP1R3C",2
+"Degradation",9,0.7503,0.7902,0.7902,"PHKG2, AGL, PHKA1, PHKA2",4
+"Warburg",8,0.8836,0.6236,0.7902,"SLC2A3, HK2, SLC2A1, ENO1",4
+"Differentiation",7,-1.8885,2.191e-05,8.763e-05,"CRNN, IVL, ESR1, KRT4, KRT13, TGM3, SPRR1A",7

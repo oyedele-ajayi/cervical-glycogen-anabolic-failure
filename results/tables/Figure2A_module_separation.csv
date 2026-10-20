@@ -1,0 +1,17 @@
+"module","grade","median_grade","median_normal","p"
+"Synthesis","CIN1",0.2543,0.2902,0.3405
+"Synthesis","CIN2",0.2152,0.2902,0.0242
+"Synthesis","CIN3",0.1903,0.2902,0.0001575
+"Synthesis","Cancer",0.1753,0.2902,1.975e-05
+"Degradation","CIN1",0.1809,0.1754,0.5756
+"Degradation","CIN2",0.1539,0.1754,0.01109
+"Degradation","CIN3",0.1699,0.1754,0.3861
+"Degradation","Cancer",0.1726,0.1754,0.6137
+"Warburg","CIN1",0.4108,0.397,0.6176
+"Warburg","CIN2",0.3884,0.397,0.5454
+"Warburg","CIN3",0.3989,0.397,0.4498
+"Warburg","Cancer",0.4017,0.397,0.5882
+"Differentiation","CIN1",0.4855,0.5171,0.356
+"Differentiation","CIN2",0.4593,0.5171,0.08834
+"Differentiation","CIN3",0.414,0.5171,0.0002193
+"Differentiation","Cancer",0.1269,0.5171,1.601e-07

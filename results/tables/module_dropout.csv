@@ -1,0 +1,6 @@
+"predictor","inverted","n_genes","AUC","CI_lower","CI_upper"
+"Synthesis",TRUE,9,0.7453,0.6637,0.8287
+"Degradation",FALSE,9,0.5044,0.4017,0.6039
+"Warburg",FALSE,8,0.5689,0.463,0.6652
+"Differentiation",TRUE,7,0.8319,0.7593,0.8978
+"GDI_diff (composite)",NA,33,0.8324,0.7613,0.8993

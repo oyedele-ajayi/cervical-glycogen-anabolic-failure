@@ -1,0 +1,6 @@
+Figure 2. Expression of the 33 panel genes across disease grade, discovery
+cohort (GSE63514, n = 128). Columns are samples ordered by grade and, within
+each grade, by ascending GDI_diff. Rows follow the locked module order:
+Synthesis (9), Degradation (9), Warburg (8), Differentiation (7).
+Values are z-scores computed within each gene across all samples, with the colour scale clipped at +/-2.5, the 98th percentile of |z|;
+2.2% of cells exceed this limit and are drawn at the extreme colour.

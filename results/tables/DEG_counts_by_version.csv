@@ -1,0 +1,8 @@
+"contrast","full","criteria4","legacy5"
+"CIN1vNormal",1,0,1
+"CIN2vNormal",311,394,326
+"CIN3vNormal",5423,5576,4746
+"CancervNormal",8555,9317,7034
+"CIN2vCIN1",0,0,0
+"CIN3vCIN2",1048,922,883
+"CancervCIN3",1808,2094,1978

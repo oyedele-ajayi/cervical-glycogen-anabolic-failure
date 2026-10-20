@@ -1,0 +1,9 @@
+"cohort","threshold","n_pos","n_neg","total_pairs","discordant_pairs","smaller_group"
+"GSE63514","CIN2+",90,38,3420,711,38
+"GSE63514","CIN3+",68,60,4080,684,60
+"GSE63514","Cancer",28,100,2800,276,28
+"GSE138080","HGCIN+",25,10,250,17,10
+"GSE138080","SCC",10,25,250,41,10
+"GSE27678_GPL571","LSIL+",32,12,384,79,12
+"GSE27678_GPL571","HSIL",21,23,483,87,21
+"GSE27678_GPL570","Cancer",28,3,84,2,3

@@ -1,0 +1,5 @@
+"module","n_members","n_sig","n_sig_up","n_sig_down","genes_up","genes_down","NES"
+"Synthesis",9,2,0,2,"","GYS2, PPP1R3C",-1.638
+"Degradation",9,3,2,1,"AGL, PHKG2","PYGB",0.75
+"Warburg",8,1,1,0,"SLC2A3","",0.884
+"Differentiation",7,7,0,7,"","CRNN, ESR1, IVL, KRT13, KRT4, SPRR1A, TGM3",-1.888
