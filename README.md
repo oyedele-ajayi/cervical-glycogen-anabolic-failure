@@ -1,63 +1,154 @@
-# Transcriptomic Analysis of Glycogen Depletion in Cervical Cancer
+# Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis
 
-This repository contains the complete R analysis pipeline for the manuscript:
+Analysis code and results for a multi-cohort transcriptomic study of why
+glycogen disappears from cervical epithelium as disease grade rises.
 
-**Title:** "Transcriptomic Evidence for Glycogen Depletion as the Molecular Basis of Acetowhitening in Cervical Dysplasia: The Glycogen Depletion Index"  
-**Authors:** Oyedele Ajayi, Efosa Odigie, Samson Adesite, Uchechukwu Eziagu, Theophilus Erameh, Ikwo Kudamnya, Anietie Archibong   
-**Journal:** [Journal Name - to be inserted upon acceptance]------ Pending
-**DOI:** [Manuscript DOI - to be inserted upon acceptance]  
-**Status:** Under Review
+Glycogen loss from dysplastic cervical epithelium has been demonstrable since
+Schiller introduced iodine staining, and it is the tissue change that visual
+inspection with Lugol's iodine reads directly. What has never been established
+is which part of glycogen metabolism accounts for the loss. Histochemistry
+reports that glycogen is absent; it cannot report why.
 
-Overview
+This study measures all four candidate mechanisms on a single scale in the same
+specimens: glycogen synthesis, glycogen degradation, Warburg-axis glycolysis,
+and squamous differentiation. The answer is that depletion is anabolic failure
+inside a collapsing differentiation programme. The catabolic and glycolytic
+arms, which the cancer-metabolism literature would have predicted, do not move
+at any disease grade in any cohort.
 
-This study characterizes glycogen metabolic reprogramming across the spectrum of cervical intraepithelial neoplasia (CIN) and invasive carcinoma. We introduce the Glycogen Depletion Index (GDI) as a novel composite molecular biomarker derived from transcriptomic data.
+## Main findings
 
-The analysis demonstrates that:
-- `PPP1R3C` silencing (log₂FC = −3.43) is a primary molecular driver of glycogen synthesis impairment.
-- The GDI achieves an AUC of 0.814 in the discovery dataset and is validated with an AUC of 0.895 in an independent, cross-platform dataset.
-- Glycogen pathway reprogramming is grade-dependent, emerging at CIN3 and maximized in invasive carcinoma.
+- Synthesis and Differentiation module scores fall with grade in all four
+  cohorts. Degradation and Warburg stay within 0.076 of their normal baseline
+  everywhere.
+- The synthetic failure is selective. Of nine Synthesis members only two change:
+  GYS2, the hepatic-type synthase, and PPP1R3C, the PTG targeting subunit. The
+  ubiquitous synthase GYS1 does not move. Glycogen storage in this tissue
+  depends on a restricted axis, and it is that axis which fails.
+- All seven Differentiation members fall and all seven sit in the top 5% of the
+  ranked transcriptome, with CRNN the most down-regulated gene of 21,755. That
+  is a programme being switched off rather than genes drifting.
+- Three independent analyses agree on the negative. Warburg separates from
+  normal at no grade (p 0.45 to 0.62), classifies CIN3 or worse at AUC 0.569
+  with an interval spanning chance, and shows no enrichment in carcinoma
+  (NES +0.884, FDR 0.790).
+- The composite index is an instrument for decomposing the mechanism, not a
+  classifier. Every form containing the Differentiation module falls within
+  0.007 of every other, so the discriminating information sits in one module and
+  no combination is advanced as a test.
 
-This repository provides all the necessary code to reproduce these findings from publicly available data.
+## Cohorts
 
-**Datasets**
+| Role | Accession | Platform | Preparation | n |
+| --- | --- | --- | --- | --- |
+| Discovery | GSE63514 | Affymetrix HG-U133 Plus 2.0 (GPL570) | Laser-capture-microdissected epithelium | 128 |
+| Replication 1 | GSE138080 | Agilent 4x44K (GPL4133) | Bulk tissue | 35 |
+| Replication 2 | GSE27678 | Affymetrix HG-U133A 2.0 (GPL571) | Exfoliated cytology | 44 |
+| Concordance check | GSE27678 | Affymetrix HG-U133 Plus 2.0 (GPL570) | Exfoliated cytology | 31 |
 
-All primary data are publicly available from the NCBI Gene Expression Omnibus (GEO). **No raw data files are stored in this repository.** The analysis scripts download all required data programmatically.
+238 specimens in total, after excluding two immortalised cell lines from the
+GPL570 set.
 
-| Dataset   | Role       | Platform           | n   | GEO Accession                                                                |
-|:----------|:-----------|:-------------------|:----|:-----------------------------------------------------------------------------|
-| GSE63514  | Discovery  | GPL570 (HGU133Plus2) | 128 | [GSE63514](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63514) |
-| GSE9750   | Validation | GPL96 (HGU133A)    | 57  | [GSE9750](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE9750)   |
+Platform and specimen preparation vary independently. The same Affymetrix array
+covers both microdissected epithelium and exfoliated cytology, and a single
+cytology series spans two array chemistries, so a platform effect cannot be
+mistaken for a preparation effect.
 
-### Sample Composition
+Grades are named in the system that belongs to the specimen: histological terms
+for microdissected epithelium and bulk tissue, Bethesda terms for cytology.
+HGCIN and HSIL are not interchangeable labels for one observation.
 
-#### GSE63514 (Discovery)
-| Group                      | n   |
-|:---------------------------|:----|
-| Normal cervical epithelium | 24  |
-| CIN1                       | 14  |
-| CIN2                       | 22  |
-| CIN3                       | 40  |
-| Invasive carcinoma         | 28  |
-| **Total**                  | **128** |
+## Reproducing the analysis
 
-#### GSE9750 (Validation)
-| Group                      | n   |
-|:---------------------------|:----|
-| Normal cervical epithelium | 24  |
-| Invasive carcinoma         | 33  |
-| **Total**                  | **57**  |
-*Note: 9 cervical cancer cell line samples were excluded from GSE9750 prior to analysis as detailed in the scripts.*
+```
+git clone https://github.com/oyedele-ajayi/<repo>.git
+cd <repo>
+Rscript run_all.R
+```
 
----
+Open the `.Rproj` file first if you work in RStudio; the scripts expect the
+repository root as the working directory and stop with a clear message if they
+do not get it.
 
-## How to Run the Analysis
+The raw GEO data is not in this repository. Script 01 downloads it, which takes
+some minutes and about 2 GB. See `data/README.md`.
 
-### Requirements
-- R version 4.2 or higher
-- An active internet connection (to download data from GEO)
-- See `session_info/R_session_info.txt` for a complete list of R packages and their versions.
+Execution order matters more than the numbering suggests. `RUN_ORDER.md` sets
+out the four dependencies that are invisible from the file names, each of which
+has corrupted results at least once during this project.
 
-### Instructions
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/oyedele-ajayi/MolVIA-GlycogenDepletion-CervicalCancer.git
+Script 20 is the last step and compares what the pipeline just produced against
+every value reported in the manuscript. A clean run returns 30 passes.
+
+## What is in here
+
+```
+scripts/        the analysis, numbered in dependency order
+run_all.R       runs them in a fresh session each, stops at the first failure
+RUN_ORDER.md    the order and the four non-obvious constraints
+results/
+  tables/       every CSV the manuscript reports, plus the supplementary workbook
+  figures/      the four main and four supplementary figures, PNG and PDF
+  figures/figure_manifest.csv  which file is which figure, and where it is cited
+logs/
+  decisions_record.csv   every analytical decision taken, with its rationale
+  session_info.txt       R and package versions the results were produced under
+data/           empty; see data/README.md for what script 01 puts here
+```
+
+## Figures
+
+Figures are numbered by order of first citation. The manifest in
+`results/figures/figure_manifest.csv` records the mapping and the scripts check
+it on every run.
+
+| Figure | Content | First cited |
+| --- | --- | --- |
+| 1 | Panel gene rank position and expression heatmap | Results 3.2 |
+| 2 | Grade at which each module separates; discrimination by module | 3.3 and 3.7 |
+| 3 | Module score trajectories across grade, four cohorts | 3.4 |
+| 4 | ROC curves for the index, four cohorts | 3.5 |
+| S1 | Quality control per cohort | 3.1 |
+| S2 | Volcano plots, four grade contrasts | 3.2 |
+| S3 | fgsea running enrichment, four modules | 3.6 |
+| S4 | Robustness: exclusion sets and leave-one-gene-out | 3.7 |
+
+## The decision record
+
+`logs/decisions_record.csv` holds every analytical decision taken during the
+analysis with its rationale, including the ones taken after inspecting the data
+and labelled as such. It is in the repository because a negative result is worth
+only as much as a reader's ability to check how it was reached.
+
+It records, among others: why probes are collapsed by MaxMean rather than
+averaged; why the 33-gene panel is not trimmed despite three members sitting at
+background; why four outlier exclusion sets are reported separately and never
+pooled; why one specimen with contradictory metadata is retained; and why the
+composite index was demoted from deliverable to instrument.
+
+## Reproducibility
+
+Every value in the manuscript was written to a file by this code and read back
+from that file. None was transcribed from console output.
+
+The random number generator is fixed with `RNGkind("Mersenne-Twister",
+"Inversion", "Rejection")` and the seed set to 42 at the start of every script
+and again immediately before each stochastic call, so results do not depend on
+execution order or on the R version's default sampling algorithm.
+
+Produced under R 4.5.3 with Bioconductor 3.22. Exact package versions are in
+`logs/session_info.txt`.
+
+## Citation
+
+If you use this code or these results, cite the paper. Citation metadata is in
+`CITATION.cff`.
+
+## Licence
+
+Code is MIT. Figures, tables and the decision record are CC BY 4.0. See
+`LICENSE` and `LICENSE-CC-BY-4.0.md`.
+
+The underlying expression data belongs to the original depositors and is subject
+to the terms of the Gene Expression Omnibus. This repository redistributes none
+of it.

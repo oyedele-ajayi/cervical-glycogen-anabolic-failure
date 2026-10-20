@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper."
+title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
+abstract: >-
+  Glycogen depletion in cervical carcinogenesis reflects failure of a
+  tissue-restricted synthetic axis, GYS2 and PPP1R3C, within a collapsing
+  squamous differentiation programme, not catabolic activation. All four
+  candidate mechanisms were measured on one scale in the same specimens across
+  four public cohorts, two array chemistries and three specimen preparations.
+authors:
+  - family-names: Ajayi
+    given-names: Oyedele Oyewumi
+    affiliation: "Department of Pathology, University of Uyo, Uyo, Akwa Ibom State, Nigeria"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add yours before release
+type: software
+license: MIT
+repository-code: "https://github.com/oyedele-ajayi/cervical-glycogen-anabolic-failure"
+keywords:
+  - cervical cancer
+  - glycogen metabolism
+  - squamous differentiation
+  - transcriptomics
+  - visual inspection screening
+  - gene set enrichment
+
+# Fill these in once the paper has a DOI, then this block becomes the thing
+# people are pointed to rather than the repository alone.
+preferred-citation:
+  type: article
+  title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
+  authors:
+    - family-names: Ajayi
+      given-names: Oyedele Oyewumi
+  year: 2026
+  journal: "TBD"
+  doi: "TBD"
