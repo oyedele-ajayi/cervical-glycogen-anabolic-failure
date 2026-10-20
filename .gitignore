@@ -24,3 +24,10 @@ logs/decisions_record_before_dedup.csv
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Large outputs: regenerate with run_all.R, or download from the Zenodo record.
+# Git keeps every version of every file forever, so these do not belong here.
+results/tables/Supplementary_Tables.xlsx
+results/tables/DEG_discovery_full.csv
+results/tables/DEG_discovery_criteria4.csv
+results/tables/DEG_discovery_legacy5.csv
