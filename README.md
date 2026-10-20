@@ -61,8 +61,8 @@ HGCIN and HSIL are not interchangeable labels for one observation.
 ## Reproducing the analysis
 
 ```
-git clone https://github.com/oyedele-ajayi/<repo>.git
-cd <repo>
+git clone https://github.com/oyedele-ajayi/cervical-glycogen-anabolic-failure.git
+cd cervical-glycogen-anabolic-failure
 Rscript run_all.R
 ```
 
