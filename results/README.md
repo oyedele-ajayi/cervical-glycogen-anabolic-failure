@@ -14,7 +14,7 @@ Not tracked in git:
 
 Git stores every version of every file permanently, so tracking these would
 burden every clone forever with output that `Rscript run_all.R` reproduces
-exactly. They are deposited with the paper and in the Zenodo record.
+exactly. They are published as the supplementary file accompanying the paper, where the three tables appear as sheets S2, S3 and S3b of the workbook.
 
 `figures/figure_manifest.csv` maps each figure to its file, the script that
 makes it, and the Results subsection where it is first cited. The numbering
