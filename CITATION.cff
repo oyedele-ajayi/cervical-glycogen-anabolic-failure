@@ -14,7 +14,7 @@ authors:
     orcid: "https://orcid.org/0000-0003-0443-9160"
 type: software
 license: MIT
-DOI: 10.5281/zenodo.20289069
+doi: "10.5281/zenodo.20289069"
 repository-code: "https://github.com/oyedele-ajayi/cervical-glycogen-anabolic-failure"
 keywords:
   - cervical cancer
@@ -24,14 +24,14 @@ keywords:
   - visual inspection screening
   - gene set enrichment
 
-# Fill these in once the paper has a DOI, then this block becomes the thing
-# people are pointed to rather than the repository alone.
-preferred-citation:#
-  type: article
-  title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
-  authors:
-    - family-names: Ajayi
-      given-names: Oyedele Oyewumi
-  year: 2026
-  journal: #
-  doi: #
+# Uncomment this block on acceptance, fill in the journal and DOI, and change
+# the message line above to point at the article.
+# preferred-citation:
+#   type: article
+#   title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
+#   authors:
+#     - family-names: Ajayi
+#       given-names: Oyedele Oyewumi
+#   year: 2026
+#   journal: "TBD"
+#   doi: "TBD"
