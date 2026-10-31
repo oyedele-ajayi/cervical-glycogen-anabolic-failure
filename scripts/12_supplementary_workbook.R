@@ -211,6 +211,28 @@ add <- function(name, df) {
   freezePane(wb, name, firstRow = TRUE)
 }
 
+# --- self-describing column names for the published workbook ---
+names(S6)[names(S6) == "AUC"]   <- "AUC_CIN3plus"
+names(S6)[names(S6) == "delta"] <- "delta_AUC_vs_full_panel"
+
+names(S9d)[match(c("CIN2plus","CIN3plus","Cancer"), names(S9d))] <-
+  c("AUC_CIN2plus","AUC_CIN3plus","AUC_Cancer")
+
+names(S9e)[match(c("full","no_warburg","no_catab","synth_only","diff_only"),
+                 names(S9e))] <-
+  c("AUC_full_index","AUC_without_Warburg","AUC_without_catabolic_modules",
+    "AUC_Synthesis_only","AUC_Differentiation_only")
+
+names(S9f)[match(c("CIN2plus","CIN2_lo","CIN2_hi",
+                   "CIN3plus","CIN3_lo","CIN3_hi",
+                   "Cancer","Cancer_lo","Cancer_hi"), names(S9f))] <-
+  c("AUC_CIN2plus","CIN2plus_CI_lower","CIN2plus_CI_upper",
+    "AUC_CIN3plus","CIN3plus_CI_lower","CIN3plus_CI_upper",
+    "AUC_Cancer","Cancer_CI_lower","Cancer_CI_upper")
+
+names(S11b)[match(c("avereps","maxmean","change"), names(S11b))] <-
+  c("meanExpr_avereps","meanExpr_maxmean","diff_maxmean_minus_avereps")
+
 addWorksheet(wb, "Contents")
 writeData(wb, "Contents", contents, headerStyle = hdr)
 setColWidths(wb, "Contents", cols = 1:2, widths = c(10, 130))
