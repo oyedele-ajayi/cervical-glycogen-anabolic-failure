@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite the paper."
+message: "If you use this code or these results, please cite the archived software below. A journal article describing this analysis is under review."
 title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
 abstract: >-
   Glycogen depletion in cervical carcinogenesis reflects failure of a
@@ -14,7 +14,7 @@ authors:
     orcid: "https://orcid.org/0000-0003-0443-9160"
 type: software
 license: MIT
-doi: 10.5281/zenodo.23498539
+DOI: 10.5281/zenodo.20289069
 repository-code: "https://github.com/oyedele-ajayi/cervical-glycogen-anabolic-failure"
 keywords:
   - cervical cancer
@@ -26,12 +26,12 @@ keywords:
 
 # Fill these in once the paper has a DOI, then this block becomes the thing
 # people are pointed to rather than the repository alone.
-preferred-citation:
+preferred-citation:#
   type: article
   title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
   authors:
     - family-names: Ajayi
       given-names: Oyedele Oyewumi
   year: 2026
-  journal: "TBD"
-  doi: "TBD"
+  journal: #
+  doi: #
