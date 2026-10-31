@@ -69,9 +69,7 @@ them, but `run_all.R` does not call them and a clean run does not need them.
 | `24_rename_scripts.R` | gave the scripts portable names |
 
 Scripts 18 and 22 are obsolete by design: the figure scripts now write the
-correct names directly, so a clean run never needs a rename pass. Script 21 is
-obsolete because 12b now updates rather than appends, so running it twice no
-longer duplicates ids.
+correct names directly, so a clean run never needs a rename pass. Script 21 is retained. 12b appends rather than updates, so running it a second time against an already-complete record duplicates seven ids, and 21 removes them. A clean run from scratch never triggers this, because the record is built once.
 
 ## Runtime
 
