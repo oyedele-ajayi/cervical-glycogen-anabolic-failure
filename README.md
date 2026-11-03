@@ -1,4 +1,5 @@
 # Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis
+Preprint: https://www.biorxiv.org/content/10.64898/2026.11.02.763436v1
 
 Analysis code and results for a multi-cohort transcriptomic study of why
 glycogen disappears from cervical epithelium as disease grade rises.
