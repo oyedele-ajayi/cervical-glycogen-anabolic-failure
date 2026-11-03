@@ -26,7 +26,7 @@ keywords:
 
   #Uncomment this block on acceptance, fill in the journal and DOI, and change
   #the message line above to point at the article.
- preferred-citation:
+  preferred-citation:
   type: article
   title: >-
     Anabolic failure, not catabolic activation, underlies glycogen depletion in
