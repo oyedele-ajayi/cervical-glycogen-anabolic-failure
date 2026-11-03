@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite the archived software below. A journal article describing this analysis is under review."
+message: "If you use this code or these results, please cite the preprint below.."
 title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
 abstract: >-
   Glycogen depletion in cervical carcinogenesis reflects failure of a
@@ -33,5 +33,5 @@ keywords:
 #     - family-names: Ajayi
 #       given-names: Oyedele Oyewumi
 #   year: 2026
-#   journal: "TBD"
-#   doi: "TBD"
+#   journal: "bioRxiv"
+#   doi: "10.64898/2026.11.02.763436"
