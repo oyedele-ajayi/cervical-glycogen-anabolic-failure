@@ -24,14 +24,14 @@ keywords:
   - visual inspection screening
   - gene set enrichment
 
-  Uncomment this block on acceptance, fill in the journal and DOI, and change
-  the message line above to point at the article.
+  #Uncomment this block on acceptance, fill in the journal and DOI, and change
+  #the message line above to point at the article.
   preferred-citation:
-    type: article
-    title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
-     authors:
-      - family-names: Ajayi
-        given-names: Oyedele Oyewumi
-    year: 2026
-    journal: "bioRxiv"
-    doi: "10.64898/2026.11.02.763436"
+  type: article
+  title: "Anabolic failure, not catabolic activation, underlies glycogen depletion in cervical carcinogenesis: a multi-cohort transcriptomic analysis"
+  authors:
+    - family-names: Ajayi
+      given-names: Oyedele Oyewumi
+  year: 2026
+  journal: "bioRxiv"
+  doi: "10.64898/2026.11.02.763436"
